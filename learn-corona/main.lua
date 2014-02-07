@@ -44,4 +44,4 @@ local function loadImage(e)
 	end
 end
       --loadRemoteImage( url, method, listener [, params], destFilename [, baseDir] [, x, y] )
-display.loadRemoteImage( "http://theme5hq.com/wp-content/uploads/2014/01/itune-01.jpg", "GET", loadImage , "temp" ,system.TemporaryDirectory ,0,0)
+display.loadRemoteImage( "http://theme5hq.com/wp-content/uploads/2014/01/itune-01.jpg", "GET", loadImage , "temp" ,system.TemporaryDirectory ,0,0);
