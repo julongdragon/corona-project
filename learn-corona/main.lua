@@ -85,6 +85,20 @@ bar = nil;
 -- captureScreenShort
 --local screenShort = display.captureScreen(true);
 
+--addEventListener
+
+function bar:touch(e)
+	if (e.phase == "began")then
+		print("touch began");
+	elseif (e.phase == "moved")then
+		print("touch moved");
+	elseif (e,phase == "ended") or e,phase == "cancled" then
+		print("touch ended");
+	end
+	return true;
+end
+
+addEventListener("touch",bar);
 
 
 
