@@ -59,7 +59,7 @@ bar.y = reloadImage.y;
 group1.x = _W * 0.5;
 group1.y = _H * 0.5;
 
-
+-- Dynamic Image for responsive design
 
 
 
