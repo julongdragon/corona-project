@@ -82,6 +82,9 @@ bar = nil;
 
 ]]
 
+-- captureScreenShort
+--local screenShort = display.captureScreen(true);
+
 
 
 
