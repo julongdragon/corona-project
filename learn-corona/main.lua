@@ -73,6 +73,15 @@ print("texture memory used : " .. texturememory_used);
 local Maxtexture = system.getInfo( "Maxtexture" );
 print("Maxtexture memory : " .. Maxtexture);
 
+--Release Memory
+--[[
+example::
+
+bar.removeSelf;
+bar = nil;
+
+]]
+
 
 
 
