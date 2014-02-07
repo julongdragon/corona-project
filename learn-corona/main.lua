@@ -59,7 +59,15 @@ bar.y = reloadImage.y;
 group1.x = _W * 0.5;
 group1.y = _H * 0.5;
 
--- Dynamic Image for responsive design
+-- background green with Mask
+local mask = graphics.newMask("assets/img/mask.png");
+local bg_green = display.newImageRect( "assets/img/bg-green.png", 320, 480 );
+bg_green.x = _W * 0.5;
+bg_green.y = _H * 0.5;
+bg_green:setMask( mask );
+
+
+
 
 
 
