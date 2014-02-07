@@ -66,8 +66,12 @@ bg_green.x = _W * 0.5;
 bg_green.y = _H * 0.5;
 bg_green:setMask( mask );
 
-
-
+-- getinfo texture memory
+local texturememory_used = system.getInfo( "texturememory" );
+texturememory_used = texturememory_used/1024/1024 ;
+print("texture memory used : " .. texturememory_used);
+local Maxtexture = system.getInfo( "Maxtexture" );
+print("Maxtexture memory : " .. Maxtexture);
 
 
 
