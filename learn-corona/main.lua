@@ -130,6 +130,8 @@ function foo:touch(event)
 	return true;
 end
 foo:addEventListener("touch",foo);
+-- Rotation
+--[[
 local fooa = display.newText( "Hello", 100 , 300 , system.nativeFont , 32);
 local i = 0;
 local n;
@@ -148,7 +150,7 @@ local function rotation(event)
 	fooa.yScale = n * 2;
 	
 end
-Runtime:addEventListener("enterFrame",rotation);
+Runtime:addEventListener("enterFrame",rotation);]]
 
 
 
