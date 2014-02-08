@@ -110,6 +110,47 @@ end
 
 bar:addEventListener("touch",bar);
 
+--foo touch
+function foo:touch(event)
+	if(event.phase == "began") then
+		display.getCurrentStage():setFocus(self)
+		self.isFocus = true;
+		print("foo touch");
+		elseif self.isFocus then
+			if (event.phase == "moved") then
+				print("foo move");
+			--end
+			elseif (event.phase == "ended") or (event.phase == "cancled") then
+			display.getCurrentStage():setFocus( false)
+			self.isFocus = false;
+			print("foo end");
+			--end
+		end
+	end
+	return true;
+end
+foo:addEventListener("touch",foo);
+local fooa = display.newText( "Hello", 100 , 300 , system.nativeFont , 32);
+local i = 0;
+local n;
+local PI = math.pi;
+local function rotation(event)
+	i = i + 1;
+	print("i increase" ,i);
+	n = ( i/360 ) * ( 2 * PI );
+	print("n 360",n);
+	n = math.cos(n);
+	print("n cos",n)
+	fooa.x = fooa.x + n;
+	print("foo x");
+	fooa.rotation = i % 360;
+	fooa.xScale = n * 2;
+	fooa.yScale = n * 2;
+	
+end
+Runtime:addEventListener("enterFrame",rotation);
+
+
 
 
 
